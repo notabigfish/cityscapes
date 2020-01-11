@@ -22,7 +22,6 @@
 # python imports
 from __future__ import print_function, absolute_import, division
 import os, glob, sys
-sys.path.insert(0, "/content/models/research/deeplab/datasets/cityscapes")
 
 # cityscapes imports
 from cityscapesscripts.helpers.csHelpers import printError
@@ -37,7 +36,7 @@ def main():
     else:
         cityscapesPath = os.path.join(os.path.dirname(os.path.realpath(__file__)),'..','..')
     """
-    cityscapesPath = "/content/drive/My Drive/deeplabv3/datasets/CityScapes"
+    cityscapesPath = "/content/drive/My Drive/deeplabv3/datasets/CityScapes“
     # how to search for all ground truth
     searchFine   = os.path.join( cityscapesPath , "gtFine"   , "*" , "*" , "*_gt*_polygons.json" )
     # searchCoarse = os.path.join( cityscapesPath , "gtCoarse" , "*" , "*" , "*_gt*_polygons.json" )
