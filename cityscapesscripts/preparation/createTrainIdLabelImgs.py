@@ -22,7 +22,7 @@
 # python imports
 from __future__ import print_function, absolute_import, division
 import os, glob, sys
-sys.path.insert(0, "/content/models/research/deeplab/datasets/cityscapes/cityscapesscripts")
+sys.path.insert(0, "/content/models/research/deeplab/datasets/cityscapes")
 
 # cityscapes imports
 from cityscapesscripts.helpers.csHelpers import printError
