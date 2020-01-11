@@ -37,17 +37,18 @@ def main():
         cityscapesPath = os.path.join(os.path.dirname(os.path.realpath(__file__)),'..','..')
     # how to search for all ground truth
     searchFine   = os.path.join( cityscapesPath , "gtFine"   , "*" , "*" , "*_gt*_polygons.json" )
-    searchCoarse = os.path.join( cityscapesPath , "gtCoarse" , "*" , "*" , "*_gt*_polygons.json" )
+    # searchCoarse = os.path.join( cityscapesPath , "gtCoarse" , "*" , "*" , "*_gt*_polygons.json" )
 
     # search files
+    print("=========", searchFine)
     filesFine = glob.glob( searchFine )
     filesFine.sort()
-    filesCoarse = glob.glob( searchCoarse )
-    filesCoarse.sort()
+    # filesCoarse = glob.glob( searchCoarse )
+    # filesCoarse.sort()
 
     # concatenate fine and coarse
-    files = filesFine + filesCoarse
-    # files = filesFine # use this line if fine is enough for now.
+    # files = filesFine + filesCoarse
+    files = filesFine # use this line if fine is enough for now.
 
     # quit if we did not find anything
     if not files:
